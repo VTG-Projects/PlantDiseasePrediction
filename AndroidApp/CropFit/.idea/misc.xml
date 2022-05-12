@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/CropFit/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1215" />
+        <entry key="..\:/CropFit/app/src/main/res/drawable/background_splashscreen.xml" value="0.2265" />
+        <entry key="..\:/CropFit/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1215" />
         <entry key="..\:/CropFit/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
       </map>
     </option>

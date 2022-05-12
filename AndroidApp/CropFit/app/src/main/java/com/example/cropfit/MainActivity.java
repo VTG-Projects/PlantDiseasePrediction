@@ -22,6 +22,7 @@ import org.tensorflow.lite.support.tensorbuffer.TensorBuffer;
 import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.util.Arrays;
+import java.util.Collections;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -74,24 +75,21 @@ public class MainActivity extends AppCompatActivity {
 
                     // Releases model resources if no longer used.
                     model.close();
-
+                    // Fetching results in res from model
                     float[] res = new float[41];
                     for(int i = 0; i <= 40; i++) {
                         res[i] = (outputFeature0.getFloatArray()[i]);
                     }
-                    //Double.parseDouble((outputFeature0.getFloatArray()[i]));
-                    StringBuffer sb = new StringBuffer();
-                    for(int i = 0; i < res.length; i++) {
-                        sb.append(res[i]);
-                        sb.append("      ");
+                    // Getting index of maximum value in results array
+                    int maxAt = 0;
+                    for (int i = 0; i < res.length; i++) {
+                        maxAt = res[i] > res[maxAt] ? i : maxAt;
                     }
-                    String str = sb.toString();
-                    tv.setText(str);
-                    //String res1 = String.valueOf(new String[] {});
-                    //res1 = Arrays.toString(res);
-                    //for(int i = 0; i<=40; i++){
-                      //  tv.setText(outputFeature0.getFloatArray()[i]+"\n");
-                    //}
+                    // Printing className of Detected Disease
+                    String classNames[] = {"Apple___Apple_scab", "Apple___Black_rot", "Apple___Cedar_apple_rust", "Apple___healthy", "Cherry_(including_sour)___Powdery_mildew", "Cherry_(including_sour)___healthy", "Chili__healthy", "Chili__leaf curl", "Chili__leaf spot", "Chili__whitefly", "Chili__yellowish", "Coffee__Rust", "Coffee__healthy", "Coffee__red spider mite", "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot", "Corn_(maize)___Common_rust_", "Corn_(maize)___Northern_Leaf_Blight", "Corn_(maize)___healthy", "Grape___Black_rot", "Grape___Esca_(Black_Measles)", "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)", "Grape___healthy", "Peach___Bacterial_spot", "Peach___healthy", "Pepper,_bell___Bacterial_spot", "Pepper,_bell___healthy", "Potato___Early_blight", "Potato___Late_blight", "Potato___healthy", "Strawberry___Leaf_scorch", "Strawberry___healthy", "Tomato___Bacterial_spot", "Tomato___Early_blight", "Tomato___Late_blight", "Tomato___Leaf_Mold", "Tomato___Septoria_leaf_spot", "Tomato___Spider_mites Two-spotted_spider_mite", "Tomato___Target_Spot", "Tomato___Tomato_Yellow_Leaf_Curl_Virus", "Tomato___Tomato_mosaic_virus", "Tomato___healthy"};
+                    String str1 = classNames[maxAt];
+                    String str2 = Float.toString(res[maxAt]);
+                    tv.setText("The predicted disease is "+str1+" with a strength of "+str2+".");
                 } catch (IOException e) {
                     // TODO Handle the exception
                 }
