@@ -28,6 +28,7 @@
             </intent-filter>
         </activity>
         <activity
+            android:requestLegacyExternalStorage="true"
             android:name=".MainActivity"
             android:theme="@style/AppTheme" />
     </application>
