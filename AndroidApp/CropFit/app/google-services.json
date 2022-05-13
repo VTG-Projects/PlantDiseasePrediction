@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "961233176949",
+    "project_id": "cropfit-minor2",
+    "storage_bucket": "cropfit-minor2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:961233176949:android:7aacd2cc2db69f12146b3c",
+        "android_client_info": {
+          "package_name": "com.example.cropfit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "961233176949-sk2g8ss1bdrh7miboj7bu33krqm8orqd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.cropfit",
+            "certificate_hash": "883e3e4d446f222a563a2270bc00acb7f16f8ede"
+          }
+        },
+        {
+          "client_id": "961233176949-2cqnsks5d49ao40fbkmrlkhu932lfk9o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDkbkkOAniTCTOB_taKOWh-1RoLaBO0E_c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "961233176949-2cqnsks5d49ao40fbkmrlkhu932lfk9o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

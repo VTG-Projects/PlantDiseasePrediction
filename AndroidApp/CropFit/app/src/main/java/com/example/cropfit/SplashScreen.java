@@ -16,6 +16,6 @@ public class SplashScreen extends AppCompatActivity {
         } catch(InterruptedException e) {
             // this part is executed when an exception (in this example InterruptedException) occurs
         }
-        startActivity(new Intent(this, MainActivity.class));
+        startActivity(new Intent(this, activity_login.class));
     }
 }
